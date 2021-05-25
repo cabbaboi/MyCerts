@@ -1,0 +1,213 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=.0">
+
+  <style>
+    html{ 
+      
+      /* background:  #5486D1; */
+      background: linear-gradient(to right,#bdc3c7 , #3DA7F3 );
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      width: 100%;
+    }
+    body{ 
+      
+      /* background: linear-gradient(to right,#bdc3c7 , #2c3e50 ); */
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* nav */
+
+    header{
+    display: block;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  .nav{
+    position: fixed;
+    background: black;
+    color: yellow;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: .9;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.nav__link{
+    color: inherit;
+    font-weight: 500;
+    font-size: 40px;
+    text-decoration: none;
+}
+.nav__link:hover{
+    color: white
+}
+
+.nav-toggle{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+.nav-open .nav{
+    transform: translateX(0%);
+}
+.nav-open .nav-toggle{
+    position: fixed;
+}
+.nav-open .hamburger{
+    transform: rotate(.625turn);
+}
+.nav-open .hamburger::before{
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after{
+    opacity: 0;
+}
+
+.hamburger{
+    display: block;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    background: wheat;
+    width: 2.8em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before{
+    top: 6px;
+}
+.hamburger::after{
+    bottom: 6px;
+}
+
+
+
+/* nav */
+    .frame{
+      padding: 0px;
+      margin: 20px;
+      display: table;
+      width: 100%;
+      
+    }
+    .badge{
+      float: left; 
+      border:  3px solid #DFF077;
+      border-radius: 15px;
+      background: #DFF077;
+    }
+    .head{
+      float: right; 
+      margin: 0px;
+      margin-right: 40px;
+      color: #DFF077;
+      font-size: 150%;
+      padding: 0px;
+    }
+    .cert{
+      padding: 0px;
+      margin: 0px;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .section{
+      margin-top: 140px;
+    }
+
+  </style>
+
+  <title>Certificates</title>
+  <!-- <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint"> -->
+
+  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+</head>
+
+<body>
+  <header>
+    <button class="nav-toggle" aria-label="toggle navibgation">
+            <span class="hamburger"></span></button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav_item"><a href="#section1" class="nav__link"><pre>Introduction to Cybersecurity</pre></a> </li>
+                    <!-- <li class="nav_item"><a href="#services" class="nav__link">My Services</a> </li>
+                    <li class="nav_item"><a href="#about" class="nav__link">About me</a> </li> -->
+                    <li class="nav_item"><a href="#section2" class="nav__link"><pre>Cybersecurity Essentials</pre></a> </li>
+                    <!-- <li class="nav_item"><a href="#contact" class="nav__link">Contact</a> </li> -->
+                </ul>
+            </nav>
+  </header>
+
+  <div class="section" id="section1"></div>
+  <div class="frame">
+  <div class="badge"><div data-iframe-width="270" data-iframe-height="210" data-share-badge-id="5599f0e3-1cab-41bb-ac0e-e03d0530aad4" data-share-badge-host="https://www.credly.com"></div></div>
+  <div class="head">
+    <pre><h1>    Introduction
+to Cybersecurity</h1></pre>
+  </div>
+</div>  
+  <div>
+    <img class="cert" src="Intro_Cyb_Sec_cisco.jpg" alt="Intro_Cyb_Sec_cisco"></div>
+  </div>
+
+  <div class="section" id="section2"></div>
+  <div class="frame">
+  <div class="badge"><div data-iframe-width="270" data-iframe-height="210" data-share-badge-id="92ab550f-787d-4b5c-a3df-b8bb77d29e30" data-share-badge-host="https://www.credly.com"></div></div>
+  <div class="head">
+    <pre><h1>Cybersecurity
+   Essentials</h1></pre>
+  </div>
+</div>  
+  <div>
+    <img class="cert" src="Cyb_Sec_Essential_cisco.jpg" alt="Cyb_Sec_Essential_cisco"></div>
+  </div>
+
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    <script src="index.js"></script>
+  <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>
